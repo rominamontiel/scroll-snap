@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css?family=Muli:400,900&display=swap');
+
+*{
+    font-family: 'Muli', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.container-scroll{
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+section{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scroll-snap-align: center;
+}
+
+section .content{
+    width: 70%;
+}
+
+section .content h2{
+    font-weight: 900;
+    font-size: 18vw;
+    text-transform: uppercase;    
+    line-height: 1;
+    margin-bottom: 5rem;
+    text-align: center;
+    margin-top: 0;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: contain;
+}
+
+section:nth-child(1) .content h2{
+    background-image: url("img/star_guardians.jpg");
+    font-size: 8vw;
+}
+section:nth-child(2) .content h2{
+    background-image: url("img/lux.jpg");
+}
+section:nth-child(3) .content h2{
+    background-image: url("img/janna.jpg");
+}
+section:nth-child(4) .content h2{
+    background-image: url("img/poppy.jpg");
+}
+
+section .content p{
+    text-align: center;
+    padding: 0 1rem;
+    color: #333;
+}
+
+section .content .container-button{
+    overflow: hidden;
+    border-radius: 3px;
+    position: relative;
+    width: 8rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem auto;
+}
+
+section .content .container-button a, section .content .container-button .gradient{
+    text-decoration: none;
+    position: absolute;
+    color: #333;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 2.9;
+    background-size: cover;
+}
+
+section .content .container-button a{
+    background: #FFF;
+    width: calc(100% - 6px);
+    height: calc(100% - 6px);
+    z-index: 2;
+}
+
+section .content .container-button .gradient{
+    z-index: 1;
+    filter: blur(3px);
+}
+
+section:nth-child(1) .content .container-button .gradient {
+    background-image: url("img/star_guardians.jpg");
+    font-size: 8vw;
+}
+
+section:nth-child(2) .content .container-button .gradient {
+    background-image: url("img/lux.jpg");
+}
+
+section:nth-child(3) .content .container-button .gradient {
+    background-image: url("img/janna.jpg");
+}
+
+section:nth-child(4) .content .container-button .gradient {
+    background-image: url("img/poppy.jpg");
+}
+
+
+
+
+@media(max-width:699px){
+    section .content{
+        width: 85%;
+    }
+    section .content h2{
+        background-size: cover;
+        background-position: center;
+        margin-bottom: 3rem;
+    }
+    section:nth-child(1) .content h2{
+        font-size: 12vw;
+    }
+}
